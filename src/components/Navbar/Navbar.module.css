@@ -1,0 +1,49 @@
+.head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 10px 50px;
+  background-color: transparent;
+  border-bottom: 1px solid black;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.contentLinks {
+  display: flex;
+  column-gap: 8px;
+}
+
+.link {
+  width: 180px;
+  padding: 15px 0;
+  font-size: 18px;
+  background-color: transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.38s;
+}
+
+.link:hover {
+  background-color: gainsboro;
+}
+
+.linkActive {
+  composes: link;
+  background-color: gainsboro;
+}

@@ -1,0 +1,8 @@
+.container {
+  margin: 0 80px;
+}
+
+.contentText {
+  display: flex;
+  align-items: flex-start;
+}
