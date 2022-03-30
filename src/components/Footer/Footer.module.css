@@ -1,74 +1,72 @@
 .footer {
-    padding-top: 50px;
-    border-top: 1px solid black;
+  padding-top: 50px;
+  border-top: 1px solid black;
 }
 .footer__top {
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 50px;
 }
 .footer__top__body {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .footer__top__info {
-    max-width: 300px;
+  max-width: 300px;
 }
 .info__title {
-    font-weight: 700;
-    font-size: 18px;
-    margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 .info__subtitle {
-    color: #635f5f;
+  color: #635f5f;
 }
 .logo {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    margin-left: -90px;
-  }
-.footer__line  {
-    border: 1px solid #000;
-    border-radius: 10px;
-    width: 94%;
-    background: #000;
-    margin: 0 auto;
-    margin-top: 20px;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-left: -90px;
+}
+.footer__line {
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 94%;
+  background: #000;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .footer__bottom__text {
-    line-height: 171%;
-    letter-spacing: 0.2px;
-    margin: 0 auto;
-    color: #635f5f;
-    padding-left: 20px;
-    
+  line-height: 171%;
+  letter-spacing: 0.2px;
+  margin: 0 auto;
+  color: #635f5f;
+  padding-left: 20px;
 }
 .footer__bottom__body {
-    padding: 30px 50px;
-    width: 100%;
-    display: flex;
-    height: 100%;
+  padding: 30px 50px;
+  width: 100%;
+  display: flex;
+  height: 100%;
 }
 .footer__icon {
-    width: 25px;
-    height: 35px;
-    align-items: center;
+  width: 25px;
+  height: 35px;
+  align-items: center;
 }
 
 .footer__icon:not(:last-child) {
-    margin-right: 20px
+  margin-right: 20px;
 }
 
-@media(max-width: 645px) {
-    .footer__bottom__body {
-        display: block;
-        text-align: center;
-    }
-    .footer__bottom__text {
-        margin: 0px 0px 20px 0px;
-    }
-   
+@media (max-width: 645px) {
+  .footer__bottom__body {
+    display: block;
+    text-align: center;
+  }
+  .footer__bottom__text {
+    margin: 0px 0px 20px 0px;
+  }
 }
