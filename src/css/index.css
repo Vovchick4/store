@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Syne+Mono&display=swap");
+
 *,
 *::before,
 *::after {
@@ -33,7 +35,7 @@ a {
 body {
   margin: 0;
   padding: 0;
-  /* background-color: var(--bg-light-color); */
+  background-color: #bcbec0;
 }
 
 body.no-scroll {
@@ -41,7 +43,10 @@ body.no-scroll {
 }
 
 html {
-  /* font-family: proxima-nova, sans-serif; */
+  scroll-behavior: smooth;
+  /* font-family: "Lato", sans-serif; */
+  font-family: "Roboto", sans-serif;
+  /* font-family: "Syne Mono", monospace; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

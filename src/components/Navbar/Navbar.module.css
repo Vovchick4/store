@@ -14,6 +14,7 @@
   padding: 10px 50px;
   background-color: transparent;
   border-bottom: 1px solid black;
+  transition: all 0.38s;
 }
 
 .logo {
@@ -46,4 +47,5 @@
 .linkActive {
   composes: link;
   background-color: gainsboro;
+  color: black;
 }
