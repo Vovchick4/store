@@ -1,4 +1,5 @@
 import { Layout, Container } from "../../components";
+import Tiles from "../../components/Tiles/Tiles";
 
 import image from "../../images/Home.webp";
 
@@ -25,6 +26,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <Tiles />
       </Container>
     </Layout>
   );
