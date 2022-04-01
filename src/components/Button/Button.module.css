@@ -1,0 +1,58 @@
+.button {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  font-size: 14px;
+  padding: 15px 30px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button:disabled {
+  cursor: default;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.width {
+  width: 200px;
+}
+
+.justBetWeen {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.default {
+  composes: button;
+  border-radius: 5px;
+  transition: color 0.38s, background 0.43s;
+}
+
+.outline {
+  composes: default;
+  background-color: transparent;
+  border-radius: 20px;
+  border: 2px solid gray;
+  transition: color 0.38s, background 0.43s;
+}
+
+.default:hover {
+  background-color: black;
+  color: white;
+}
+
+.icon {
+  /* position: absolute;
+  top: 0;
+  right: 0; */
+}

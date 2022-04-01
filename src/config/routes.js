@@ -8,6 +8,16 @@ const routes = [
         exact: true,
         component: lazy(() => import('../pages/Home')),
     },
+    {
+        path: urls.catalog,
+        exact: true,
+        component: lazy(() => import('../pages/Catalog')),
+    },
+    {
+        path: urls.catalog + '/:productId',
+        exact: true,
+        component: lazy(() => import('../pages/CatalogItem')),
+    },
 ]
 
 export default routes

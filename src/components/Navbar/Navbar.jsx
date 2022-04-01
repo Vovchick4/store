@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
+import { AiOutlineSearch } from "react-icons/ai";
+
 import styles from "./Navbar.module.css";
+
+import { Input } from "..";
 
 import { urls } from "../../config/urls";
 
@@ -93,7 +97,13 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div></div>
+        <div>
+          <Input
+            type="search"
+            icon={<AiOutlineSearch size={20} />}
+            placeholder="Input text"
+          />
+        </div>
       </div>
     </div>
   );
