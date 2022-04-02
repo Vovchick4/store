@@ -1,8 +1,10 @@
 [
   {
     "id": 1,
-    "name": "ASUS1",
-    "comp": "ASUS"
+    "name": "ROG (ASUS)",
+    "company": "ASUS",
+    "price": 120,
+    "quality": 3
   },
   {
     "id": 2,
