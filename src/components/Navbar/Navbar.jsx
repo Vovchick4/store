@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 
 import { AiOutlineSearch } from "react-icons/ai";
 
@@ -8,6 +8,7 @@ import styles from "./Navbar.module.css";
 import { Input } from "..";
 
 import { urls } from "../../config/urls";
+import { FilterSearchContext } from "../../context/FilterSearch.context";
 
 import logo from "../../images/logo.jpg";
 
@@ -54,6 +55,10 @@ export default function Navbar() {
   const [theme] = useState(Theme.default);
   const [navState, setNavState] = useState(NavState.Inactive);
 
+  const location = useLocation();
+
+  const { serchText, setSerchText } = useContext(FilterSearchContext);
+
   const handleWindowScroll = () => {
     if (window.scrollY >= 80) {
       setNavState(NavState.Active);
@@ -98,11 +103,15 @@ export default function Navbar() {
         </div>
 
         <div>
-          <Input
-            type="search"
-            icon={<AiOutlineSearch size={20} />}
-            placeholder="Input text"
-          />
+          {location.pathname === urls.catalog && (
+            <Input
+              type="search"
+              icon={<AiOutlineSearch size={20} />}
+              placeholder="Input text"
+              value={serchText}
+              onChange={(e) => setSerchText(e.target.value)}
+            />
+          )}
         </div>
       </div>
     </div>

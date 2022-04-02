@@ -1,67 +1,64 @@
-.item:not(:first-child) {
-    margin-left: 90px
-}
 .item__body {
-    border: 1.7px solid #000;
-    border-radius: 10px;
+  border: 1.7px solid #000;
+  border-radius: 10px;
 }
 .item__body__header {
-    background:rgb(231, 231, 231);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    margin-bottom: 10px;
-    padding: 10px 0px 10px 15px;
+  background: rgb(231, 231, 231);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px 0px 10px 15px;
 }
 .item__container {
-    padding: 0px 15px 0px 15px;
+  padding: 0px 15px 0px 15px;
 }
 .column__image {
-    display: block;
-    padding: 0px 0px 70% 0px;
+  display: block;
+  padding: 0px 0px 70% 0px;
 }
-  ._ibg {
-    position: relative;
-  }
-  ._ibg img {
-    border-radius: 8px;
-    position: absolute;
-    width: 80%;
-    height: 100%;
-    top: 0;
-    left: 10%;
-    object-fit: cover;
-  }
+._ibg {
+  position: relative;
+}
+._ibg img {
+  border-radius: 8px;
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  top: 0;
+  left: 10%;
+  object-fit: cover;
+}
 .column__title {
-    text-align: center;
-    font-weight: 700;
-    font-size: 24px;
-    color:rgb(43, 43, 43);
-    margin: 15px 0px 6px 0px;
-    letter-spacing: 0.5px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  color: rgb(43, 43, 43);
+  margin: 15px 0px 6px 0px;
+  letter-spacing: 0.5px;
 }
 .column__text {
-    color: #494949;
+  color: #494949;
 }
 .column__price {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 .column__price__num {
-    letter-spacing: 0.3px;
+  letter-spacing: 0.3px;
 }
 .column__btn {
-    margin: 25px 0px 15px 0px;
-    text-align: center;
+  margin: 25px 0px 15px 0px;
+  text-align: center;
 }
 .column__btn button {
-      font-size: 16px;
-      border-radius: 13px;
-      background: rgb(54, 54, 54);
-      color: #fff;
-      padding: 8px 0px 8px 0px;
-      width: 95%;
-      border:#000;
-      font-weight: 500;
-      cursor: pointer;
+  font-size: 16px;
+  border-radius: 13px;
+  background: rgb(54, 54, 54);
+  color: #fff;
+  padding: 8px 0px 8px 0px;
+  width: 95%;
+  border: #000;
+  font-weight: 500;
+  cursor: pointer;
 }

@@ -7,9 +7,13 @@ import './css/index.css';
 
 import { App } from './components';
 
+import { FilterSearchProvider } from './context/FilterSearch.context';
+
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <FilterSearchProvider>
+      <App />
+    </FilterSearchProvider>
   </BrowserRouter>,
   document.getElementById('root')
 );

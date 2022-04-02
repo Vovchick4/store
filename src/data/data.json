@@ -9,19 +9,19 @@
   {
     "id": 2,
     "name": "Acer1",
-    "comp": "Acer",
+    "company": "Acer",
     "price": 1250
   },
   {
     "id": 3,
     "name": "ASUS2",
-    "comp": "ASUS",
+    "company": "ASUS",
     "price": 2100
   },
   {
     "id": 4,
     "name": "Acer2",
-    "comp": "Acer",
+    "company": "Acer",
     "price": 880
   }
 ]

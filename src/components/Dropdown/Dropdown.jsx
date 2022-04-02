@@ -12,9 +12,9 @@ export default function Dropdown({
   open,
   onClose,
   list,
-  activeFilters,
-  setActiveFilters,
-  setFilterKeys,
+  activeFilters = null,
+  setActiveFilters = null,
+  setFilterKeys = null,
 }) {
   return (
     <CSSTransition in={open} classNames={fadeIn} timeout={75} unmountOnExit>
@@ -27,6 +27,8 @@ export default function Dropdown({
               key={id}
               className={styles.Content}
               onClick={() => {
+                if (!activeFilters) return;
+
                 setActiveFilters((prev) => {
                   // With KEYS
                   // if (!prev[filterKeys]) prev[filterKeys] = [];
@@ -60,7 +62,7 @@ export default function Dropdown({
               }}
             >
               {label}
-              {activeFilters.includes(label) ? (
+              {activeFilters && activeFilters.includes(label) ? (
                 <AiFillCheckCircle size={20} />
               ) : null}
             </button>

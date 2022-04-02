@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import { BiDownArrow } from "react-icons/bi";
@@ -7,8 +7,10 @@ import { Layout, Container, Button, Dropdown } from "../../components";
 
 import styles from "./Catalog.module.css";
 import scaleIn from "../../css/anim/scaleIn.module.css";
+import { FilterSearchContext } from "../../context/FilterSearch.context";
+
 import data from "../../data/data.json";
-import Items from './../../components/Items/Items';
+import Items from "./../../components/Items/Items";
 
 const sortFilter = [
   {
@@ -59,6 +61,19 @@ export default function Catalog() {
   const [datas, setDatas] = useState(data.sort((a, b) => a.price - b.price));
   const [filterKeys, setFilterKeys] = useState([]);
   const [activeFilters, setActiveFilters] = useState([]);
+
+  const { serchText, setSearchText } = useContext(FilterSearchContext);
+
+  useEffect(() => {
+    setDatas(
+      data.filter((item) =>
+        Object.values(item)
+          .join("")
+          .toLowerCase()
+          .includes(serchText.toLowerCase())
+      )
+    );
+  }, [serchText, setSearchText]);
 
   function filterBrand(array) {
     return array.filter(
@@ -139,6 +154,12 @@ export default function Catalog() {
     setActiveDrpDwn(null);
   }
 
+  function clearFilters() {
+    setFilterKeys([]);
+    setActiveFilters([]);
+    setDatas(data);
+  }
+
   return (
     <Layout>
       <Container>
@@ -205,14 +226,30 @@ export default function Catalog() {
             </div>
           </div>
 
-          <div>
+          <div style={{ display: "flex", gap: "20px" }}>
+            <Button variant="outline" onClick={clearFilters}>
+              Clear FIlters
+            </Button>
             <Button onClick={filterItems} variant="outline">
               Apply
             </Button>
           </div>
         </div>
 
-        <Items data={datas}/>
+        <TransitionGroup className={styles.filter}>
+          {activeFilters.map((text) => (
+            <CSSTransition
+              key={text}
+              timeout={300}
+              classNames={scaleIn}
+              unmountOnExit
+            >
+              <p className={styles.filterCard}>{text}</p>
+            </CSSTransition>
+          ))}
+        </TransitionGroup>
+
+        <Items data={datas} />
       </Container>
     </Layout>
   );

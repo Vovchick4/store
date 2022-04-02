@@ -51,11 +51,16 @@
   color: white;
 }
 
+.select {
+  composes: outline;
+  border-radius: 8px;
+  padding: 10px 30px;
+}
+
 .icon {
   /* position: absolute;
   top: 0;
   right: 0; */
 }
 .content {
-  
 }
