@@ -1,0 +1,11 @@
+.catalogItem {
+    margin-top: 100px;
+}
+.catalogItem__top {
+    display: flex;
+    justify-content: space-between;
+}
+.catalogItem__bottom {
+    display: flex;
+    justify-content: space-between;
+}

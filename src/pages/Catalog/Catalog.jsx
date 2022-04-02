@@ -6,6 +6,7 @@ import { Layout, Container, Button, Dropdown } from "../../components";
 
 import styles from "./Catalog.module.css";
 import data from "../../data/data.json";
+import Items from './../../components/Items/Items';
 
 const sortFilter = [
   {
@@ -149,11 +150,7 @@ export default function Catalog() {
           </div>
         </div>
 
-        <div className={styles.gridContent}>
-          {datas.map((d) => (
-            <p key={d.id}>{d.name}</p>
-          ))}
-        </div>
+        <Items data={datas}/>
       </Container>
     </Layout>
   );

@@ -8,5 +8,15 @@
     "id": 2,
     "name": "Acer1",
     "comp": "Acer"
+  },
+  {
+    "id": 3,
+    "name": "ASUS2",
+    "comp": "ASUS"
+  },
+  {
+    "id": 4,
+    "name": "Acer2",
+    "comp": "Acer"
   }
 ]
