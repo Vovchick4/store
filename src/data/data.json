@@ -1,12 +1,58 @@
 [
   {
     "id": 1,
-    "name": "ASUS1",
-    "comp": "ASUS"
+    "name": "ROG (ASUS)",
+    "company": "ASUS",
+    "price": 120,
+    "quality": 3
   },
   {
     "id": 2,
-    "name": "Acer1",
-    "comp": "Acer"
+    "name": "STRIX (ACER)",
+    "company": "Acer",
+    "price": 120,
+    "quality": 4
+  },
+  {
+    "id": 3,
+    "name": "Lenovo 34",
+    "company": "Lenovo",
+    "price": 38,
+    "quality": 3
+  },
+  {
+    "id": 4,
+    "name": "Acer 38",
+    "company": "Acer",
+    "price": 83,
+    "quality": 4
+  },
+  {
+    "id": 5,
+    "name": "ASUS 99",
+    "company": "ASUS",
+    "price": 70,
+    "quality": 8
+  },
+  {
+    "id": 6,
+    "name": "Acer 12",
+    "company": "Acer",
+    "price": 100,
+    "quality": 2
+  },
+  {
+    "id": 7,
+    "name": "Acer 15",
+    "company": "Acer",
+    "price": 120,
+    "quality": 1
+  },
+  {
+    "id": 8,
+    "name": "Acer1 (LG)",
+    "company": "LG",
+    "price": 380,
+    "quality": 1
   }
 ]
