@@ -3,22 +3,25 @@
     "id": 1,
     "name": "ROG (ASUS)",
     "company": "ASUS",
-    "price": 120,
+    "price": 1400,
     "quality": 3
   },
   {
     "id": 2,
     "name": "Acer1",
-    "comp": "Acer"
+    "comp": "Acer",
+    "price": 1250
   },
   {
     "id": 3,
     "name": "ASUS2",
-    "comp": "ASUS"
+    "comp": "ASUS",
+    "price": 2100
   },
   {
     "id": 4,
     "name": "Acer2",
-    "comp": "Acer"
+    "comp": "Acer",
+    "price": 880
   }
 ]

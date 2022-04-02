@@ -24,7 +24,7 @@ const Item = (props) => {
                         </div>
                         <div className={styles.column__price}>
                             <div><b>Price :</b></div>
-                            <div className={styles.column__price__num}>$ 2450</div>
+                            <div className={styles.column__price__num}>$ {props.datas.price}</div>
                         </div>
                         <div className={styles.column__btn}>
                             <NavLink to={path}><button >View more</button></NavLink>

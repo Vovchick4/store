@@ -3,14 +3,10 @@ import styles from "./Items.module.css";
 import {NavLink} from 'react-router-dom';
 import Item from './Item/Item';
 
-const Items = (props) => {
-    /*<Item data={props.data} datas={asus} />
-        <Item data={props.data} datas={acer} />
-        <Item data={props.data} datas={asus}/>
-        <Item data={props.data} datas={acer} />
-        */ 
+const Items = (props) => { 
     const asus = props.data.filter((d) => d.id === 1)
     const acer = props.data.filter((d) => d.id === 2)
+    console.log(asus)
     
     return (
         <div className={styles.items}>

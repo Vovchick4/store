@@ -1,11 +1,83 @@
 .catalogItem {
-    margin-top: 100px;
+    margin-top: 110px;
 }
 .catalogItem__top {
     display: flex;
-    justify-content: space-between;
+}
+.top__right {
+    margin-left: 80px;
+}
+.top__right__characteristic {
+    display: flex;
+}
+.characteristic {
+    color: #fff;
+    background-color: #000;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 12px;
+}
+.characteristic__blue {
+    background:rgb(6, 89, 106);
+}
+.characteristic:not(:first-child) {
+    margin-left: 10px;
+}
+.top__right__title {
+    font-size: 34px;
+    letter-spacing: 0.5px;
+    padding: 30px 0px 40px 0px;
+}
+.top__right__subtitle {
+    line-height: 130%;
+    color: rgb(52, 52, 52);
+    font-size: 17px;
+}
+.top__right__fields {
+    display: flex;
+    padding-top: 50px;
+}
+.selectFields {
+    margin-left: 100px;
+}
+.countFields, .selectFields {
+   font-weight: 500;
+   font-size: 16px; 
+   letter-spacing: 0.5px;
+}
+.fieldLabel {
+    margin-bottom: 20px;
+}
+.countFields Input {
+    border: 1.7px solid #000;
+    border-radius: 6px;
+    padding: 6px 0px 6px 10px;
+    width: 85%;
+    margin-top: 10px;
 }
 .catalogItem__bottom {
     display: flex;
     justify-content: space-between;
+    margin: 200px 0px 50px 0px;
+}
+.bottom__left__price {
+    font-weight: 700;
+    font-size: 18px;
+}
+.bottom__right {
+    display: flex;
+}
+.bottom__right__addBtn {
+    margin-left: 30px;
+}
+.bottom__right__addBtn Button {
+    background: #474747;
+    color:#fff;
+    border-radius: 10px;
+    margin-top: -18px;
+}
+.bottom__right__goBackBtn Button {
+    border: 1.5px solid #000;
+    border-radius: 10px;
+    margin-top: -18px;
 }
