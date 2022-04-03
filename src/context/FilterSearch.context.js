@@ -3,11 +3,11 @@ import { createContext, useState } from "react";
 export const FilterSearchContext = createContext(null);
 
 export function FilterSearchProvider({ children }) {
-    const [serchText, setSerchText] = useState("")
+    const [searchText, setSearchText] = useState("")
 
     const value = {
-        serchText,
-        setSerchText
+        searchText,
+        setSearchText
     };
 
     return (

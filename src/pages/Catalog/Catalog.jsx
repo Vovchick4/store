@@ -58,22 +58,28 @@ const filterState = {
 };
 export default function Catalog() {
   const [activeDrpDwn, setActiveDrpDwn] = useState(null);
-  const [datas, setDatas] = useState(data.sort((a, b) => a.price - b.price));
+  const [datas, setDatas] = useState(data);
   const [filterKeys, setFilterKeys] = useState([]);
   const [activeFilters, setActiveFilters] = useState([]);
 
-  const { serchText, setSearchText } = useContext(FilterSearchContext);
+  const { searchText, setSearchText } = useContext(FilterSearchContext);
 
   useEffect(() => {
+    if (!searchText.trim()) {
+      setDatas(data);
+      return;
+    }
+
     setDatas(
       data.filter((item) =>
         Object.values(item)
           .join("")
+          .trim()
           .toLowerCase()
-          .includes(serchText.toLowerCase())
+          .includes(searchText.trim().toLowerCase())
       )
     );
-  }, [serchText, setSearchText]);
+  }, [searchText, setSearchText]);
 
   function filterBrand(array) {
     return array.filter(

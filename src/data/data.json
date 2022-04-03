@@ -3,6 +3,7 @@
     "id": 1,
     "name": "ROG (ASUS)",
     "company": "ASUS",
+    "image": "https://content.rozetka.com.ua/goods/images/big/247677447.jpg",
     "price": 1400,
     "quality": 3
   },
@@ -10,18 +11,21 @@
     "id": 2,
     "name": "Acer1",
     "company": "Acer",
+    "image": "https://content.rozetka.com.ua/goods/images/big/247677447.jpg",
     "price": 1250
   },
   {
     "id": 3,
     "name": "ASUS2",
     "company": "ASUS",
+    "image": "https://content1.rozetka.com.ua/goods/images/big/174139157.jpg",
     "price": 2100
   },
   {
     "id": 4,
     "name": "Acer2",
     "company": "Acer",
+    "image": "https://content1.rozetka.com.ua/goods/images/big/53964007.jpg",
     "price": 880
   }
 ]

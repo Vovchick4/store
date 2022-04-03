@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { BiDownArrow } from "react-icons/bi";
 
 import { Layout, Container, Button, Input, Dropdown } from "../../components";
-import image from "../../images/Home.webp";
+// import image from "../../images/Home.webp";
 import styles from "./CatalogItem.module.css";
 import data from "../../data/data.json";
 
@@ -28,7 +28,11 @@ export default function CatalogItem() {
         <div className={styles.catalogItem}>
           <div className={styles.catalogItem__top}>
             <div className={styles.top__left}>
-              <img src={image} alt="pcPhoto"></img>
+              <img
+                className={styles.image}
+                src={datas[0]?.image}
+                alt="pcPhoto"
+              ></img>
             </div>
             <div className={styles.top__right}>
               <div className={styles.top__right__characteristic}>

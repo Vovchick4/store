@@ -1,7 +1,8 @@
-import { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
 import { AiOutlineSearch } from "react-icons/ai";
+import { GiCancel } from "react-icons/gi";
 
 import styles from "./Navbar.module.css";
 
@@ -57,7 +58,7 @@ export default function Navbar() {
 
   const location = useLocation();
 
-  const { serchText, setSerchText } = useContext(FilterSearchContext);
+  const { searchText, setSearchText } = useContext(FilterSearchContext);
 
   const handleWindowScroll = () => {
     if (window.scrollY >= 80) {
@@ -74,6 +75,10 @@ export default function Navbar() {
       document.removeEventListener("scroll", handleWindowScroll);
     };
   }, []);
+
+  function clearQuery() {
+    setSearchText("");
+  }
 
   return (
     <div className={styles.head}>
@@ -102,15 +107,25 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div>
+        <div className={styles.searchBarContent}>
           {location.pathname === urls.catalog && (
-            <Input
-              type="search"
-              icon={<AiOutlineSearch size={20} />}
-              placeholder="Input text"
-              value={serchText}
-              onChange={(e) => setSerchText(e.target.value)}
-            />
+            <React.Fragment>
+              <Input
+                type="search"
+                icon={<AiOutlineSearch size={20} />}
+                placeholder="Input text"
+                value={searchText}
+                onChange={(e) => setSearchText(e.target.value)}
+              />
+
+              {searchText && (
+                <GiCancel
+                  className={styles.searchIcon}
+                  size={20}
+                  onClick={clearQuery}
+                />
+              )}
+            </React.Fragment>
           )}
         </div>
       </div>
