@@ -1,8 +1,8 @@
+import React, { useState } from "react";
 import styles from "./Tiles.module.css";
-import image from "../../images/Home.webp";
 import { NavLink } from "react-router-dom";
+import image from "../../images/Home.webp";
 import data from "../../data/data.json";
-import { useState } from "react";
 
 const path = "#";
 

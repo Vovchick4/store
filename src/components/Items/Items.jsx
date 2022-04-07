@@ -7,9 +7,6 @@ import fadeIn from "../../css/anim/fadeIn.module.css";
 import Item from "./Item/Item";
 
 const Items = (props) => {
-  //   const asus = props.data.filter((d) => d.id === 1);
-  //   const acer = props.data.filter((d) => d.id === 2);
-  //   console.log(asus);
 
   return (
     <TransitionGroup className={styles.items}>
