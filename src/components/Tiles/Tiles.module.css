@@ -1,6 +1,7 @@
 .tiles__body {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
   margin: 0 -20px;
 }
 .tiles__container {
@@ -18,9 +19,6 @@
 }
 
 .tiles__column {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
   padding: 0 20px;
 }
 .tiles__column__item {
@@ -64,6 +62,9 @@
   margin: 0 0 80px 0;
 }
 @media (max-width: 1016px) {
+  .tiles__body {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .tiles__column {
     flex: 0 1 50%;
     padding: 0px 15px 15px 10px;
@@ -73,6 +74,9 @@
   }
 }
 @media (max-width: 646px) {
+  .tiles__body {
+    grid-template-columns: 1fr;
+  }
   .tiles__column {
     flex: 0 1 100%;
   }
