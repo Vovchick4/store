@@ -4,12 +4,12 @@ import FileService from "./FileService.mjs";
 class ItemService {
     async create(item, image) {
         const fileName = FileService.saveFile(image)
-            const createdItem = await Item.create({...item, image: fileName});   //зберігаємо item в бд, в create передаємо обєкт який відповідає схемі
+            const createdItem = await Item.create({...item, image: fileName});  
             return createdItem;
     };
 
     async getAll() {
-            const items = await Item.find(); //якзо без параметрів, то поверне всі айтеми
+            const items = await Item.find(); 
             return items;
     };
 
@@ -25,7 +25,7 @@ class ItemService {
             if(!item._id) {
                 throw new Error('id is not entered');
             }
-            const updatedItem = await Item.findByIdAndUpdate(item._id, item, {new: true}); //new true повертає обновлену версію поста
+            const updatedItem = await Item.findByIdAndUpdate(item._id, item, {new: true}); 
             return updatedItem;
     };
 

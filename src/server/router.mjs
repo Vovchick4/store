@@ -1,8 +1,8 @@
-import Router from "express";  //створимо файл для маршрутів
+import Router from "express";  
 import cors from 'cors'
 import ItemController from "./ItemController.mjs";
 
-const router = new Router();   //створюємо екзкмпляр
+const router = new Router();   
 
 router.use(cors({ origin: '*' })) // Additional Options (CORS)
 
@@ -15,5 +15,5 @@ router.delete('/items/:id', ItemController.delete);
 router.get('/', (request, response) => {
     response.status(200).json('Server is working on get');
 });
-//створили роутери де вказали маршрути для постів
+
 export default router;

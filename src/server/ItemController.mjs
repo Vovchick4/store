@@ -3,7 +3,7 @@ import ItemService from "./ItemService.mjs";
 class ItemController {
     async create(request, response) {
         try {
-            const item = await ItemService.create(request.body, request.files.image);   //викликаємо ф-цію create і параметром передаємо пост з тіла запроса
+            const item = await ItemService.create(request.body, request.files.image);  
             response.json(item);
         } 
         catch (error) {
@@ -33,7 +33,7 @@ class ItemController {
 
     async update(request, response) {
         try {
-            const updatedItem = await ItemService.update(request.body); //new true повертає обновлену версію поста
+            const updatedItem = await ItemService.update(request.body); 
             return response.json(updatedItem);
         } 
         catch (error) {
