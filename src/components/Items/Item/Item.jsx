@@ -1,11 +1,10 @@
 import React from "react";
 import styles from "./Item.module.css";
 import { NavLink } from "react-router-dom";
+import { urls } from "../../../config/urls";
 // import image from "../../../images/Home.webp";
 
 const Item = (props) => {
-  const path = `/catalog/${props.datas.id}`;
-
   return (
     <div className={styles.item}>
       <div className={styles.item__body}>
@@ -31,7 +30,7 @@ const Item = (props) => {
                 </div>
               </div>
               <div className={styles.column__btn}>
-                <NavLink to={path}>
+                <NavLink to={urls.catalog + `/${props.datas._id}`}>
                   <button>View more</button>
                 </NavLink>
               </div>

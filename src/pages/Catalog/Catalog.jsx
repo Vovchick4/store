@@ -1,9 +1,10 @@
-import { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import axios from "axios";
 
 import { BiDownArrow } from "react-icons/bi";
 
-import { Layout, Container, Button, Dropdown } from "../../components";
+import { Layout, Container, Button, Dropdown, Loader } from "../../components";
 
 import styles from "./Catalog.module.css";
 import scaleIn from "../../css/anim/scaleIn.module.css";
@@ -61,6 +62,7 @@ export default function Catalog() {
   const [datas, setDatas] = useState(data);
   const [filterKeys, setFilterKeys] = useState([]);
   const [activeFilters, setActiveFilters] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const { searchText, setSearchText } = useContext(FilterSearchContext);
 
@@ -80,6 +82,18 @@ export default function Catalog() {
       )
     );
   }, [searchText, setSearchText]);
+
+  useEffect(() => {
+    setLoading(true);
+
+    axios({
+      url: `/items`,
+      method: "GET",
+    })
+      .then((res) => setDatas(res.data))
+      .catch((error) => alert(error.message))
+      .finally(() => setLoading(false));
+  }, []);
 
   function filterBrand(array) {
     return array.filter(
@@ -255,7 +269,9 @@ export default function Catalog() {
           ))}
         </TransitionGroup>
 
-        <Items data={datas} />
+        {loading && <Loader />}
+
+        {!loading && <Items data={datas} />}
       </Container>
     </Layout>
   );

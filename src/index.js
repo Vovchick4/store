@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import 'normalize.css'
 import './css/index.css';
+import './config/axios'
 
 import { App } from './components';
 
