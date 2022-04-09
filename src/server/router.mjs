@@ -1,7 +1,10 @@
-import Router  from "express";  //створимо файл для маршрутів
+import Router from "express";  //створимо файл для маршрутів
+import cors from 'cors'
 import ItemController from "./ItemController.mjs";
 
 const router = new Router();   //створюємо екзкмпляр
+
+router.use(cors({ origin: '*' })) // Additional Options (CORS)
 
 router.post('/items', ItemController.create);
 router.get('/items', ItemController.getAll);
