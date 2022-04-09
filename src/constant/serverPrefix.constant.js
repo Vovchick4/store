@@ -1,0 +1,1 @@
+export const serverPrefix = 'http://localhost:4000/'

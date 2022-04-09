@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Item.module.css";
 import { NavLink } from "react-router-dom";
 import { urls } from "../../../config/urls";
+import { serverPrefix } from "../../../constant/serverPrefix.constant";
 // import image from "../../../images/Home.webp";
 
 const Item = (props) => {
@@ -12,7 +13,7 @@ const Item = (props) => {
         <div className={styles.item__container}>
           <div className={styles.item__column}>
             <div className={`${styles.column__image} ${styles._ibg}`}>
-              <img src={props.datas?.image} alt="Photo1" />
+              <img src={serverPrefix + props.datas?.image} alt="Photo1" />
             </div>
             <h5 className={styles.column__title}>{props.datas.name}</h5>
             <div className={styles.texts}>

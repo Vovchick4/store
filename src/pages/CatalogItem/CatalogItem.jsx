@@ -11,7 +11,8 @@ import {
   Dropdown,
   Loader,
 } from "../../components";
-// import image from "../../images/Home.webp";
+import { serverPrefix } from "../../constant/serverPrefix.constant";
+import image from "../../images/Home.webp";
 import styles from "./CatalogItem.module.css";
 
 export default function CatalogItem() {
@@ -54,7 +55,7 @@ export default function CatalogItem() {
               <div className={styles.top__left}>
                 <img
                   className={styles.image}
-                  src={product?.image}
+                  src={serverPrefix + product?.image}
                   alt="pcPhoto"
                 ></img>
               </div>

@@ -34,7 +34,7 @@ const brandFilter = [
   },
   {
     id: 2,
-    label: "Acer",
+    label: "ACER",
     filterKeys: "brandFilter",
   },
 ];
@@ -59,9 +59,9 @@ const filterState = {
 };
 export default function Catalog() {
   const [activeDrpDwn, setActiveDrpDwn] = useState(null);
-  const [datas, setDatas] = useState(data);
+  const [datas, setDatas] = useState([]);
   const [filterKeys, setFilterKeys] = useState([]);
-  const [activeFilters, setActiveFilters] = useState([]);
+  let [activeFilters, setActiveFilters] = useState([]);
   const [loading, setLoading] = useState(false);
 
   const { searchText, setSearchText } = useContext(FilterSearchContext);
@@ -84,6 +84,10 @@ export default function Catalog() {
   }, [searchText, setSearchText]);
 
   useEffect(() => {
+    fetchAllDatas();
+  }, []);
+
+  function fetchAllDatas() {
     setLoading(true);
 
     axios({
@@ -93,14 +97,17 @@ export default function Catalog() {
       .then((res) => setDatas(res.data))
       .catch((error) => alert(error.message))
       .finally(() => setLoading(false));
-  }, []);
+  }
 
   function filterBrand(array) {
-    return array.filter(
-      (arr) =>
+    return array.filter((arr) => {
+      // activeFilters = activeFilters.join("/").toLowerCase().split("/");
+
+      return (
         activeFilters.includes(arr.company) ||
         activeFilters.includes(arr.quality)
-    );
+      );
+    });
   }
 
   function sortCompByPrice(arr) {
@@ -126,7 +133,8 @@ export default function Catalog() {
   function filterItems() {
     if (!activeFilters) return;
 
-    let res = [...data];
+    let res = JSON.parse(JSON.stringify(datas));
+    console.log(res);
 
     // MBY TEST
     // console.log(activeFilters.hasOwnProperty(Object.keys(activeFilters)));
@@ -175,9 +183,9 @@ export default function Catalog() {
   }
 
   function clearFilters() {
+    fetchAllDatas();
     setFilterKeys([]);
     setActiveFilters([]);
-    setDatas(data);
   }
 
   return (
